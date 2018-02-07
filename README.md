@@ -14,6 +14,6 @@ Ref:  [lifewire](https://www.lifewire.com/example-uses-of-sed-2201058)
 ## Exit criteria
 Use the included text file in this repository to practice editing it in place.
 
-* Write a series of regular expressions using `sed`. You may find it easiest to practice first using the `` argument before changing this argument to `` to do the actual edit.
+* Write a series of regular expressions using `sed`. You may find it easiest to practice first using the `-e` argument before changing this argument to `-i` to do the actual edit when you're confident.
   * Look for the `key:` variable and remove the value seen there
   * Look for the `upnpUuid;` variable and replace this with `11111111-2222-3333-4444-555555555555`

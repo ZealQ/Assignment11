@@ -1,0 +1,34 @@
+~/.octoprint/config.yaml
+
+  discovery:
+    publicPort: 80
+    upnpUuid: 3358e910-0c73-465e-87e0-3fd280c02d2f
+  api:
+    key: 4b2ef21d9dfb44fd9f665d133b30e26f
+    something: else
+  another:
+    thing: here
+server:
+  commands:
+    serverRestartCommand: /home/pi/scripts/webcam stop && sleep 1 && sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
+  secretKey: BaLdspJhriHQA7CY1OfHj9iToSiWlOzD
+system:
+  actions:
+  - action: streamon
+    command: /home/pi/scripts/webcam start
+    confirm: false
+    name: Start video stream
+  - action: streamoff
+    command: /home/pi/scripts/webcam stop
+    confirm: false
+    name: Stop video stream
+temperature: {}
+webcam:
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream
+
+
